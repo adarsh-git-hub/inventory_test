@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+    <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.EmbeddedDriver</property>
+    <property name="hibernate.connection.url">jdbc:derby:db/stockDB;create=true</property>
+    <!--        <property name="hibernate.dialect">org.hibernate.dialect.DerbyDialect</property>
+        <property name="hibernate.connection.driver_class">org.apache.derby.jdbc.ClientDriver</property>
+        <property name="hibernate.connection.url">jdbc:derby://localhost:1527/inventoryTestApp</property>-->
+    <property name="hibernate.connection.username">inventoryTestApp</property>
+    <property name="hibernate.connection.password">eddy</property>
+    <!-- c3p0 config http://www.hibernate.org/214.html -->
+    <!--    <property name="hibernate.connection.provider_class"
+        value="org.hibernate.connection.C3P0ConnectionProvider" />-->
+    <property name="connection.provider_class">org.hibernate.connection.C3P0ConnectionProvider</property>
+    <property name="hibernate.c3p0.acquire_increment">2</property>
+    <property name="hibernate.c3p0.min_size">5</property>
+    <property name="hibernate.c3p0.max_size">500</property>
+    <property name="hibernate.c3p0.timeout">60</property>
+    <property name="hibernate.c3p0.max_statements">50</property>
+    <property name="hibernate.c3p0.idle_test_period">120</property>
+    <!--<property name="hibernate.c3p0.acquireRetryAttempts">1</property>-->
+    <!--<property name="hibernate.c3p0.acquireRetryDelay">250</property>-->
+    <!--common properties-->
+    <property name="hibernate.current_session_context_class">thread</property>
+    <property name="hibernate.show_sql">true</property>
+    <property name="hibernate.use_sql_comments">true</property>
+    <property name="hibernate.transaction.factory_class">org.hibernate.engine.transaction.internal.jdbc.JdbcTransactionFactory</property>
+    <property name="hibernate.transaction.auto_close_session">true</property>
+    <property name="hibernate.transaction.flush_before_completion">true</property>
+    <property name="hibernate.hbm2ddl.auto">update</property>
+    <!--<property key="hibernate.enable_lazy_load_no_trans">true</property>-->
+    <!--mapping addresses-->
+    <mapping class="inventory.hibernate.entities.Authentication"/>
+    <mapping class="inventory.hibernate.entities.BillPrefixTable"/>
+    <mapping class="inventory.hibernate.entities.BillPurchase"/>
+    <mapping class="inventory.hibernate.entities.BillSale"/>
+    <mapping class="inventory.hibernate.entities.ChallanSale"/>
+    <mapping class="inventory.hibernate.entities.ChequeDetails"/>
+    <mapping class="inventory.hibernate.entities.ClientTable"/>
+    <mapping class="inventory.hibernate.entities.ItemTable"/>
+    <mapping class="inventory.hibernate.entities.OrderPurchase"/>
+    <mapping class="inventory.hibernate.entities.PaymentByClients"/>
+    <mapping class="inventory.hibernate.entities.PaymentByUs"/>
+    <mapping class="inventory.hibernate.entities.PurchaseItemBill"/>
+    <mapping class="inventory.hibernate.entities.PurchaseItemChallan"/>
+    <mapping class="inventory.hibernate.entities.ReturnPurchaseBillItem"/>
+    <mapping class="inventory.hibernate.entities.ReturnPurchaseChallanItem"/>
+    <mapping class="inventory.hibernate.entities.ReturnSaleBillItem"/>
+    <mapping class="inventory.hibernate.entities.ReturnSaleChallanItem"/>
+    <mapping class="inventory.hibernate.entities.SaleItemBill"/>
+    <mapping class="inventory.hibernate.entities.SaleItemChallan"/>
+  </session-factory>
+</hibernate-configuration>

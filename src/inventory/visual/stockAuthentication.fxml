@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.visual.StockAuthenticationController">
+    <stylesheets>
+        <URL value="@/inventory/resources/css/csmBatchLess.css" />
+    </stylesheets>
+   <children>
+      <TableView fx:id="tvAuthentication" layoutX="14.0" layoutY="42.0" prefHeight="353.0" prefWidth="804.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0">
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         <columns>
+            <TableColumn fx:id="tcSNo" prefWidth="75.0" text="S. NO." />
+            <TableColumn fx:id="tcUsernameAuthentication" prefWidth="75.0" text="USER NAME" />
+            <TableColumn fx:id="tcPasswordAuthentication" prefWidth="75.0" text="PASSWORD" />
+            <TableColumn fx:id="tcUserTypeAuthentication" prefWidth="75.0" text="USER TYPE" />
+            <TableColumn fx:id="tcLoginTableId" prefWidth="75.0" text="LOGIN TABLE ID" />
+         </columns>
+      </TableView>
+      <HBox layoutX="7.0" layoutY="7.0" prefHeight="26.0" prefWidth="818.0" AnchorPane.leftAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <Label layoutX="23.0" layoutY="26.0" prefHeight="26.0" prefWidth="92.0" text="USER NAME : ">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFUserName" layoutX="115.0" layoutY="26.0" onKeyReleased="#onUserNameEntered" promptText="Enter User Name">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </TextField>
+            <Region prefHeight="26.0" prefWidth="10.0" />
+            <Label layoutX="300.0" layoutY="26.0" prefHeight="26.0" prefWidth="88.0" text="PASSWORD : ">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFPassword" layoutX="392.0" layoutY="26.0" onKeyReleased="#onPasswordEntered" promptText="Enter Password">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </TextField>
+            <Region prefHeight="26.0" prefWidth="10.0" />
+            <Label layoutX="579.0" layoutY="26.0" prefHeight="26.0" prefWidth="86.0" text="USER TYPE : ">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtFUserType" layoutX="671.0" layoutY="26.0" onKeyReleased="#onUserTypeEntered" promptText="Enter User Type">
+               <font>
+                  <Font name="Serif Regular" size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

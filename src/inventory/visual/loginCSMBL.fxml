@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="244.0" prefWidth="437.0" styleClass="mainFxmlClass" stylesheets="@/inventory/resources/css/csmBatchLess.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.visual.LoginCSMBLController">
+   <children>
+      <Text fontSmoothingType="LCD" layoutX="198.0" layoutY="209.0" strokeWidth="0.0" text="Inventory" wrappingWidth="224.74609375">
+         <fill>
+            <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+               <stops>
+                  <Stop color="RED" />
+                  <Stop color="#ff9100" offset="0.11403404826796187" />
+                  <Stop color="#81ff00fa" offset="0.2375478927203058" />
+                  <Stop color="#00ff6dfa" offset="0.3524904214559384" />
+                  <Stop color="#00b4fffa" offset="0.4808231623020104" />
+                  <Stop color="#0025fffa" offset="0.6104198759726663" />
+                  <Stop color="#a200fffa" offset="0.737962633803373" />
+                  <Stop color="#ff00c1fa" offset="0.8734052217877313" />
+                  <Stop color="#ff0063fa" offset="1.0" />
+               </stops>
+            </LinearGradient>
+         </fill>
+         <font>
+            <Font name="SF Sports Night Alternate" size="40.0" />
+         </font>
+         <stroke>
+            <RadialGradient centerX="0.6388888888888888" centerY="0.5428571428571427" focusDistance="-0.7441860465116279" radius="0.40697674418604646">
+               <stops>
+                  <Stop color="#9387c3" />
+                  <Stop color="#8e7e94" offset="1.0" />
+               </stops>
+            </RadialGradient>
+         </stroke>
+         <effect>
+            <Lighting bumpInput="$null" diffuseConstant="2.0" specularConstant="2.0" specularExponent="40.0" surfaceScale="0.22">
+               <light>
+                  <Light.Distant azimuth="250.12" />
+               </light>
+            </Lighting>
+         </effect>
+      </Text>
+      <VBox layoutX="30.0" layoutY="31.0">
+         <children>
+            <HBox layoutX="30.0" layoutY="31.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="36.0" text="User Name :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="30.0" prefWidth="10.0" />
+                  <TextField fx:id="txtFUserName" layoutX="123.0" layoutY="31.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter User Name">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+            <HBox layoutX="30.0" layoutY="74.0">
+               <children>
+                  <Label layoutX="30.0" layoutY="79.0" text="Password :">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <Region prefHeight="30.0" prefWidth="20.0" />
+                  <PasswordField fx:id="pswFPassword" layoutX="123.0" layoutY="74.0" prefHeight="30.0" prefWidth="212.0" promptText="Enter Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+               <VBox.margin>
+                  <Insets bottom="10.0" />
+               </VBox.margin>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="btnLogIn" layoutX="124.0" layoutY="122.0" mnemonicParsing="false" onAction="#onLoginPressed" prefHeight="38.0" prefWidth="110.0" text="Log In">
+         <font>
+            <Font name="Serif Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="lblLoginStatus" layoutX="244.0" layoutY="126.0" prefHeight="31.0" prefWidth="168.0" textFill="RED">
+         <font>
+            <Font name="Serif Regular" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<SplitPane dividerPositions="0.34782608695652173" prefHeight="440.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.visual.BaseController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="438.0" prefWidth="193.0" SplitPane.resizableWithParent="false">
+         <children>
+            <VBox layoutX="12.0" layoutY="58.0" prefHeight="438.0" prefWidth="182.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="0.0">
+               <children>
+                  <Button fx:id="btnDashboard" mnemonicParsing="false" onAction="#onDashboardCllicked" prefHeight="25.0" prefWidth="188.0" text="Dashboard">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnSaleChallan" mnemonicParsing="false" onAction="#onSaleChallanClicked" prefHeight="25.0" prefWidth="188.0" text="Sale Challan">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnSaleBill" mnemonicParsing="false" onAction="#onSaleBillClicked" prefHeight="25.0" prefWidth="188.0" text="Sale Bill">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPurchaseChallan" mnemonicParsing="false" onAction="#onPurchaseChallanClicked" prefHeight="25.0" prefWidth="188.0" text="Purchase Challan">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnPurchaseBill" mnemonicParsing="false" onAction="#onPurchaseBillClicked" prefHeight="25.0" prefWidth="188.0" text="Purchase Bill">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnReturn" mnemonicParsing="false" onAction="#onReturnClicked" prefHeight="25.0" prefWidth="188.0" text="Return">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnView" mnemonicParsing="false" onAction="#onViewClicked" prefHeight="25.0" prefWidth="188.0" text="View">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnStock" mnemonicParsing="false" onAction="#onStockClicked" prefHeight="25.0" prefWidth="188.0" text="Stock">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnBillEdit" mnemonicParsing="false" onAction="#onBillEditclicked" prefHeight="25.0" prefWidth="188.0" text="Bill Edit">
+                     <font>
+                        <Font name="Serif Regular" size="20.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="10.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <SplitPane dividerPositions="0.2009132420091324" layoutX="171.0" layoutY="71.0" orientation="VERTICAL" prefHeight="398.0" prefWidth="415.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+            <StackPane prefHeight="150.0" prefWidth="200.0" SplitPane.resizableWithParent="false">
+               <children>
+                  <Label fx:id="lblNotification" alignment="CENTER" prefHeight="25.0" prefWidth="383.0" StackPane.alignment="BOTTOM_CENTER">
+                     <font>
+                        <Font name="Serif Regular" size="14.0" />
+                     </font>
+                  </Label>
+               </children></StackPane>
+            <ScrollPane fitToHeight="true" fitToWidth="true" prefViewportHeight="323.0" prefViewportWidth="415.0">
+               <content>
+                  <StackPane fx:id="stackPaneExec" prefHeight="150.0" prefWidth="200.0" />
+               </content>
+            </ScrollPane>
+        </items>
+      </SplitPane>
+  </items>
+</SplitPane>

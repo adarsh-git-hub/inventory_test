@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="416.0" prefWidth="1094.0" styleClass="mainFxmlClass" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="inventory.visual.StockBaseController">
+    <stylesheets>
+        <URL value="@/inventory/resources/css/csmBatchLess.css" />
+    </stylesheets>
+    <children>
+        <HBox layoutX="38.0" layoutY="61.0" AnchorPane.leftAnchor="20.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Label layoutX="38.0" layoutY="65.0" prefHeight="25.0" prefWidth="81.0" text="Select Table : ">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Label>
+                <ComboBox fx:id="comboSelectTable" editable="true" layoutX="129.0" layoutY="61.0" onAction="#onDBTableSelect" prefWidth="150.0" promptText="Select Table">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="ITEM" />
+                            <String fx:value="CLIENT" />
+                            <String fx:value="BILL PREFIX" />
+                            <String fx:value="LOGIN DETAILS" />
+                        </FXCollections>
+                    </items>
+                    <value>
+                        <String fx:value="ITEM" />
+                    </value>
+                </ComboBox>
+                <Region prefHeight="26.0" prefWidth="10.0" />
+                <TextField fx:id="txtFStockSearch" layoutX="292.0" layoutY="73.0" prefHeight="26.0" prefWidth="401.0">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </TextField>
+                <Button fx:id="btnSearch" mnemonicParsing="false" onAction="#onStockSearch" text="SEARCH">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <HBox layoutX="350.0" layoutY="195.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="5.0">
+            <children>
+                <Button fx:id="btnNew" layoutX="350.0" layoutY="208.0" mnemonicParsing="false" onAction="#onStockNewEntry" prefHeight="26.0" prefWidth="100.0" text="NEW">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Button>
+                <Region prefHeight="26.0" prefWidth="10.0" />
+                <Button fx:id="btnUpdate" layoutX="412.0" layoutY="198.0" mnemonicParsing="false" onAction="#onStockUpdateEntry" prefHeight="26.0" prefWidth="100.0" text="UPDATE">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Button>
+                <Region prefHeight="26.0" prefWidth="10.0" />
+                <Button fx:id="btnDelete" layoutX="513.0" layoutY="195.0" mnemonicParsing="false" onAction="#onStockDeleteEntry" prefHeight="26.0" prefWidth="100.0" text="DELETE">
+                    <font>
+                        <Font name="Serif Regular" size="14.0" />
+                    </font>
+                </Button>
+            </children>
+        </HBox>
+        <StackPane fx:id="stackPaneStockMain" layoutX="14.0" layoutY="69.0" prefHeight="333.0" prefWidth="1060.0" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="35.0" />
+    </children>
+</AnchorPane>
